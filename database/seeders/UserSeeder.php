@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Jobs\UserImportJob;
+use App\Jobs\UserChunkImportJob;
 use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
@@ -12,6 +12,6 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        dispatch(new UserImportJob);
+        dispatch(new UserChunkImportJob([]));
     }
 }

@@ -12,7 +12,7 @@ return new class extends Migration
         Schema::create('storage_settings', function (Blueprint $table) {
             $table->id();
             $table->string('provider')->default('local');
-            $table->json('credentials')->nullable();
+            $table->longText('credentials')->nullable();
             $table->string('root')->nullable();
             $table->string('public_url')->nullable();
             $table->boolean('enabled')->default(true);
